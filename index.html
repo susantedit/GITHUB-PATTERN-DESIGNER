@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Pattern Generator | Developer Susant</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="logo">
+      <img src="assets/logo.jpg" class="header-logo" alt="Developer Susant Logo">
+      <span class="logo-text">DEVELOPER SUSANT</span>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html" class="active">🎨 Draw first, Commit later.</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main class="page-wrapper">
+
+    <div class="card">
+
+      <div class="card-header">
+        <h2>💠 Pattern → pattern.json</h2>
+
+        <a class="star-btn" href="https://github.com/susantedit" target="_blank">
+          <i class="fab fa-github"></i> Follow on GitHub
+        </a>
+      </div>
+
+      <p class="hint">
+        <strong>✍🏻 Unleash Your Creativity with Every Dot:</strong><br>
+        <span class="instruction-line"><i class="fas fa-mouse-pointer mouse-icon"></i> <b>Left
+            Click → Add</b> <span class="demo-cell filled"></span></span><br>
+        <span class="instruction-line"><i class="fas fa-mouse mouse-icon"></i> <b>Right
+            Click → Remove</b> <span class="demo-cell empty"></span></span>
+      </p>
+
+      <div class="months">
+        <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span>
+        <span>May</span><span>Jun</span><span>Jul</span><span>Aug</span>
+        <span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+      </div>
+
+      <div class="grid-wrapper">
+        <div class="days">
+          <span>Mon</span><span>Tue</span><span>Wed</span>
+          <span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+        </div>
+
+        <div id="grid"></div>
+      </div>
+
+      <div class="actions">
+        <button id="download"><i class="fas fa-download"></i> Download pattern.json</button>
+        <button id="reset" class="reset"><i class="fas fa-rotate-right"></i> Reset Grid</button>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="socials">
+      <a href="https://facebook.com/Kantaraj.Luitel" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com/susantgamerz" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/in/kantaraj-luitel" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://x.com/Susantedit" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.youtube.com/@developersusant" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://github.com/susantedit" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="mailto:susantedit@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <p class="footer-text">
+      &lt; CODE. BUILD. SOLVE. REPEAT /&gt;<br>
+      Made with ❤️ by <strong>Developer Susant</strong>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

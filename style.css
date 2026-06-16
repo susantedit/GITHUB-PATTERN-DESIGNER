@@ -1,0 +1,348 @@
+:root {
+  /* Logo Theme Variables (Dark/Gold Default) */
+  --bg-color: #08090a;
+  --bg-gradient-color: rgba(225, 179, 62, 0.03); /* Faint gold grid */
+  --card-bg: #121418;
+  --card-border: rgba(225, 179, 62, 0.2);
+  
+  --text-color: #e6edf3;
+  --text-muted: #8b949e;
+  
+  --header-bg: rgba(18, 20, 24, 0.85);
+  --header-border: rgba(225, 179, 62, 0.2);
+  
+  /* The Magic Logo Gold */
+  --accent-gold: #e1b33e;
+  --accent-gold-glow: rgba(225, 179, 62, 0.4);
+  --accent-gold-hover: #f2c94c;
+  
+  --cell-bg: #1f2329;
+  --cell-active: var(--accent-gold);
+  
+  --btn-bg: #1a1d24;
+  --btn-border: var(--accent-gold);
+  --btn-text: var(--accent-gold);
+  --btn-hover-bg: var(--accent-gold);
+  --btn-hover-text: #08090a;
+  
+  --social-icon-color: #8b949e;
+}
+
+[data-theme="light"] {
+  /* Optional Light Theme (Kept but tailored to match gold branding) */
+  --bg-color: #f6f8fa;
+  --bg-gradient-color: #e5e7eb;
+  --card-bg: #ffffff;
+  --card-border: #d0d7de;
+  --text-color: #24292f;
+  --text-muted: #57606a;
+  --header-bg: #ffffff;
+  --header-border: #d0d7de;
+  --cell-bg: #ebedf0;
+  --cell-active: #d4af37; /* Darker gold for light mode */
+  --btn-bg: #ffffff;
+  --btn-border: #d4af37;
+  --btn-text: #24292f;
+  --btn-hover-bg: #d4af37;
+  --btn-hover-text: #ffffff;
+  --social-icon-color: #24292f;
+}
+
+* {
+  box-sizing: border-box;
+  caret-color: transparent;
+}
+
+body {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif; /* Tech Font */
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  background-image:
+    linear-gradient(to right, var(--bg-gradient-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--bg-gradient-color) 1px, transparent 1px);
+  background-size: 40px 40px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ================= HEADER ================= */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  background: var(--header-bg);
+  backdrop-filter: blur(10px); /* Glassmorphism */
+  border-bottom: 1px solid var(--header-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--accent-gold);
+}
+
+.header-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px; /* Square with rounded edges like the logo */
+  object-fit: cover;
+  margin-right: 15px;
+  border: 1px solid var(--accent-gold);
+  box-shadow: 0 0 10px var(--accent-gold-glow);
+}
+
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover, .nav a.active {
+  color: var(--accent-gold);
+}
+
+/* ================= PAGE & CARD ================= */
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 30px;
+  width: fit-content;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--card-border);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.star-btn {
+  background: transparent;
+  color: var(--accent-gold);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--accent-gold);
+  transition: all 0.3s ease;
+}
+
+.star-btn:hover {
+  background: var(--accent-gold);
+  color: var(--bg-color);
+  box-shadow: 0 0 15px var(--accent-gold-glow);
+}
+
+/* ================= GRID INSTRUCTIONS ================= */
+.hint {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  background: rgba(225, 179, 62, 0.05);
+  padding: 10px 15px;
+  border-radius: 6px;
+  border-left: 3px solid var(--accent-gold);
+}
+
+.instruction-line {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 8px;
+  margin-right: 15px;
+}
+
+.mouse-icon {
+  color: var(--accent-gold);
+  margin-right: 8px;
+}
+
+.demo-cell {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  margin-left: 8px;
+}
+
+.demo-cell.filled {
+  background: var(--cell-active);
+  box-shadow: 0 0 5px var(--accent-gold-glow);
+}
+
+.demo-cell.empty {
+  background: var(--cell-bg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ================= THE GRID ================= */
+.months {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-left: 48px;
+  margin-bottom: 8px;
+}
+
+.grid-wrapper {
+  display: flex;
+}
+
+.days {
+  display: grid;
+  grid-template-rows: repeat(7, 16px);
+  gap: 5px;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-right: 12px;
+  padding-top: 2px;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(53, 14px);
+  gap: 5px;
+}
+
+.cell {
+  width: 14px;
+  height: 14px;
+  background: var(--cell-bg);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cell:hover {
+  transform: scale(1.1);
+  border: 1px solid var(--accent-gold);
+}
+
+.cell.active {
+  background: var(--cell-active);
+  box-shadow: 0 0 8px var(--accent-gold-glow);
+}
+
+/* ================= BUTTONS ================= */
+.actions {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  background: var(--btn-bg);
+  border: 1px solid var(--btn-border);
+  color: var(--btn-text);
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
+  box-shadow: 0 0 15px var(--accent-gold-glow);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.reset {
+  background: transparent;
+  border-color: var(--text-muted);
+  color: var(--text-muted);
+}
+
+.reset:hover {
+  background: rgba(255, 50, 50, 0.1);
+  border-color: #ff4444;
+  color: #ff4444;
+  box-shadow: none;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  text-align: center;
+  margin: 40px 0;
+  color: var(--text-muted);
+}
+
+.socials {
+  margin-bottom: 15px;
+}
+
+.socials a {
+  margin: 0 12px;
+  color: var(--social-icon-color);
+  font-size: 20px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.socials a:hover {
+  color: var(--accent-gold);
+  transform: translateY(-3px) scale(1.1);
+  filter: drop-shadow(0 0 8px var(--accent-gold-glow));
+}
+
+.footer-text {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.footer-text strong {
+  color: var(--accent-gold);
+}
+
+/* ================= THEME TOGGLE ================= */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--accent-gold);
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 20px;
+  padding: 5px;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(30deg);
+  background: none;
+  box-shadow: none;
+}
