@@ -6,7 +6,7 @@
 
 Design custom GitHub contribution graph artwork visually and export it as JSON for automated commit generation.
 
-🌐 **Live Demo:** https://github-pattern-generator.web.app/
+![GitHub Pattern Generator Demo](assets/PatternDemo.png)
 
 </div>
 
@@ -14,103 +14,85 @@ Design custom GitHub contribution graph artwork visually and export it as JSON f
 
 ## ✨ Overview
 
-GitHub contribution graphs are more than activity trackers—they're digital canvases.
+GitHub Pattern Generator is a browser-based visual editor that allows developers to create custom artwork using GitHub's contribution graph layout.
 
-**GitHub Pattern Generator** transforms the traditional contribution grid into an interactive design editor where you can create text, logos, symbols, pixel art, and custom patterns that can later be rendered on your GitHub profile using automated commit scripts.
+Instead of viewing contribution graphs solely as activity trackers, this project turns them into a creative canvas where you can design text, logos, symbols, pixel art, and personalized patterns.
 
-Everything runs directly in your browser with zero installation required.
+Everything runs entirely in the browser using HTML, CSS, and JavaScript with no installation or dependencies required.
 
 ---
 
 ## 🚀 Features
 
-### 🎨 Visual Pattern Designer
+### 🎨 Visual Contribution Editor
 
 * Interactive GitHub-style contribution grid
-* Real-time drawing experience
+* Real-time click and drag drawing
 * Pixel-perfect pattern creation
-
-### 🖱️ Simple Controls
-
-* Left Click → Paint a contribution block
-* Right Click → Erase a contribution block
 * Instant visual feedback
+
+### 🖱️ Easy Drawing Controls
+
+* Left Click + Drag → Paint cells
+* Right Click + Drag → Erase cells
+* Fast and responsive interaction
 
 ### 📦 JSON Export
 
 * Export designs as `pattern.json`
-* Save and reuse patterns anytime
-* Share patterns with others
+* Reuse and edit saved patterns
+* Share designs with others
 
 ### 🤖 Automation Ready
 
-* Compatible with GitHub contribution automation tools
-* Easily integrate with commit-generation scripts
-* Generate contribution art automatically
+* Compatible with GitHub contribution automation workflows
+* Works with commit generation scripts
+* Easy integration into existing tools
 
-### ⚡ Lightweight & Fast
+### ⚡ Lightweight
 
-* Built using pure HTML, CSS, and JavaScript
+* Built with Vanilla JavaScript
 * No frameworks
-* No dependencies
 * No build process
-
----
-
-## 🌍 Live Website
-
-The project is deployed using Firebase Hosting with automated deployment pipelines.
-
-### 🔗 Website
-
-https://github-pattern-generator.web.app/
+* Runs directly from `index.html`
 
 ---
 
 ## 📖 How It Works
 
-### Step 1 — Open the Generator
+### 1. Open the Application
 
-Launch the web application in your browser.
+Launch `index.html` in any modern web browser.
 
-### Step 2 — Create Your Design
+### 2. Create Your Design
 
-Draw directly on the contribution grid.
+Draw directly on the contribution grid using your mouse.
 
-Examples:
+Ideas include:
 
-* Text
 * Initials
 * Logos
 * Pixel Art
-* Shapes
-* Custom Patterns
+* Custom Signatures
+* Geometric Patterns
 
-### Step 3 — Export Pattern
+### 3. Export Pattern
 
-Click:
+Click the export button to download your design as `pattern.json`.
 
-```text
-Download pattern.json
-```
+### 4. Generate Contributions
 
-Your design will be exported as a JSON file.
-
-### Step 4 — Generate Contributions
-
-Use the exported `pattern.json` with your preferred GitHub auto-commit tool to recreate the pattern on your contribution graph.
+Use the exported JSON with your preferred GitHub contribution automation script to recreate the design on your profile over time.
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Technology         | Purpose       |
-| ------------------ | ------------- |
-| HTML5              | Structure     |
-| CSS3               | Styling       |
-| Vanilla JavaScript | Functionality |
-| Firebase Hosting   | Deployment    |
-| GitHub Actions     | CI/CD         |
+| Technology | Purpose                       |
+| ---------- | ----------------------------- |
+| HTML5      | Structure                     |
+| CSS3       | Styling & Layout              |
+| JavaScript | Drawing Logic & Export System |
 
 ---
 
@@ -122,81 +104,71 @@ github-pattern-generator/
 ├── index.html
 ├── style.css
 ├── script.js
+├── logo.jpg
+├── README.md
 │
-├── public/
-│   └── assets/
-│       └── PatternDemo.png
-│
-└── README.md
+└── assets/
+    └── PatternDemo.png
 ```
 
 ---
 
 ## 💡 Use Cases
 
-### GitHub Contribution Art
+### Personal Branding
 
-Create custom artwork on your GitHub profile.
+Create unique contribution graph artwork that reflects your identity as a developer.
 
 ### Automation Testing
 
-Test commit automation workflows and scripts.
+Test commit scheduling, contribution generation, and graph rendering workflows.
 
-### Educational Projects
+### Educational Learning
 
-Learn how GitHub contribution graphs work.
+Explore browser events, grid systems, JSON serialization, file generation, and interactive UI development.
 
-### Open Source Practice
+---
 
-Experiment with frontend development and UI/UX improvements.
+## 🗺️ Roadmap
 
-### Personal Branding
-
-Create unique contribution graph signatures.
+* [ ] Multiple contribution intensity levels
+* [ ] Pattern templates
+* [ ] Undo / Redo support
+* [ ] Local storage auto-save
+* [ ] Mobile touch support
+* [ ] GitHub contribution preview mode
+* [ ] Import existing patterns
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome and appreciated.
-
-### Ways You Can Help
-
-* Improve UI/UX
-* Add new export formats
-* Improve accessibility
-* Add mobile enhancements
-* Optimize performance
-* Fix bugs and edge cases
-
-### Contribution Process
+Contributions are welcome.
 
 ```bash
-# Fork Repository
+# Fork the repository
 
-# Create Branch
-git checkout -b feature/amazing-feature
+# Create a feature branch
+git checkout -b feature/my-improvement
 
-# Commit Changes
-git commit -m "Add amazing feature"
+# Commit your changes
+git commit -m "Add awesome feature"
 
-# Push Branch
-git push origin feature/amazing-feature
+# Push to GitHub
+git push origin feature/my-improvement
 
-# Open Pull Request
+# Open a Pull Request
 ```
 
 ---
 
-## 🌟 Future Improvements
+## 💭 Inspiration
 
-* Multiple color intensity levels
-* Pattern templates
-* Undo / Redo support
-* Import existing JSON patterns
-* Mobile drawing optimization
-* GitHub profile preview mode
-* Animation playback mode
+GitHub contribution graphs are usually used to visualize activity.
+
+This project explores a different idea: treating the contribution grid as a digital canvas where developers can create meaningful artwork and personal branding directly on their GitHub profiles.
+
+The original concept and feature architecture were brainstormed with ChatGPT, while the design, implementation, development, and customization were created by Susant Luitel.
 
 ---
 
@@ -210,26 +182,51 @@ Feel free to use, modify, and distribute this project.
 
 ## 👨‍💻 Author
 
-### Susant Luitel
+**Susant Luitel**
 
-Frontend Developer • Open Source Contributor • Creator
+Open Source Developer from Nepal
 
-#### 🌐 Connect With Me
+Building tools, experiments, and developer-focused projects.
 
-* GitHub: https://github.com/susantedit
-* LinkedIn: https://linkedin.com/in/kantaraj-luitel
-* YouTube: https://www.youtube.com/@developersusant
-* Instagram: https://instagram.com/susantgamerz
-* X: https://x.com/Susantedit
-* Facebook: https://facebook.com/Kantaraj.Luitel
-* CodePen: https://codepen.io/susant-gamerz
+### 🌐 Connect With Me
 
----
+<p align="center">
 
-<div align="center">
+<a href="https://github.com/susantedit">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+</a>
 
-### ⭐ If you found this project useful, consider starring the repository!
+<a href="https://linkedin.com/in/kantaraj-luitel">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+</a>
 
-Made with ❤️ by Susant Luitel
+<a href="https://www.youtube.com/@developersusant">
+  <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube">
+</a>
 
-</div>
+<a href="https://instagram.com/susantgamerz">
+  <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram">
+</a>
+
+<a href="https://x.com/Susantedit">
+  <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="X">
+</a>
+
+<a href="https://facebook.com/Kantaraj.Luitel">
+  <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook">
+</a>
+
+<a href="https://codepen.io/susant-gamerz">
+  <img src="https://img.shields.io/badge/CodePen-000000?style=for-the-badge&logo=codepen&logoColor=white" alt="CodePen">
+</a>
+
+</p>
+
+
+## ⭐ Support
+
+If you found this project useful, consider starring the repository and sharing your GitHub contribution artwork.
+
+Built and maintained by Susant Luitel.
+
+**CODE • BUILD • SOLVE • REPEAT**
